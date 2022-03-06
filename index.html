@@ -13,6 +13,7 @@
     body {
       background-color: black;
       z-index: 0;
+
     }
     h1 {
       text-align: center;
@@ -48,10 +49,38 @@
     display: inline-block;
 }
 
+
+.title h1 {
+  width: 55%;
+  display: absolute;
+  overflow: hidden;
+  border-right: .15em solid white;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation:
+    typewriter 3.5s steps(40, end),
+    blink-cursor .75s step-end infinite;
+  }
+
+
+
+@keyframes blink-cursor {
+  from, to { border-color: transparent }
+  50% { border-color: white }
+}
+@keyframes typewriter {
+  from { width: 0 }
+  to { width: 55% }
+}
+
   </style>
 
   <body>
+
+      <div class="title">
     <h1>Welcome to Gordon's Homepage</h1>
+
+    </div>
 
     <!-- About Me -->
     <div id="about" class="container about p-5">
